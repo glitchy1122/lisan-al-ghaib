@@ -74,4 +74,4 @@ packages/create-portable-context/  npx installer CLI
 
 ## License
 
-MIT for the installer package; adapt freely for your team.
+[GNU GPL v3](./LICENSE) (or later).
