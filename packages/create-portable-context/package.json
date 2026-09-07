@@ -1,0 +1,38 @@
+{
+  "name": "create-portable-context",
+  "version": "0.2.0",
+  "description": "npx installer for portable AI/IDE project context — detects your repo and adds AGENTS.md, handoff, skills, and bridges without breaking existing files",
+  "type": "module",
+  "bin": {
+    "create-portable-context": "./bin/create-portable-context.js",
+    "portable-context": "./bin/create-portable-context.js"
+  },
+  "files": [
+    "bin",
+    "src",
+    "templates",
+    "README.md"
+  ],
+  "scripts": {
+    "start": "node ./bin/create-portable-context.js",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test src/**/*.test.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "agents.md",
+    "cursor",
+    "claude",
+    "copilot",
+    "portable-context",
+    "ai-coding",
+    "handoff"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.19.43",
+    "typescript": "5.9.3"
+  }
+}
