@@ -1,0 +1,114 @@
+@import "tailwindcss";
+
+:root {
+  --ink: #0b1c1a;
+  --ink-soft: #16322e;
+  --mist: #d7e4df;
+  --paper: #eef4f1;
+  --teal: #0f6b5c;
+  --teal-bright: #1a9b82;
+  --sand: #c4a574;
+  --danger: #b42318;
+  --background: var(--paper);
+  --foreground: var(--ink);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-mist: var(--mist);
+  --color-paper: var(--paper);
+  --color-teal: var(--teal);
+  --color-teal-bright: var(--teal-bright);
+  --color-sand: var(--sand);
+  --color-danger: var(--danger);
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--foreground);
+  font-family: var(--font-body), "IBM Plex Sans", sans-serif;
+  background:
+    radial-gradient(1200px 600px at 10% -10%, rgba(26, 155, 130, 0.18), transparent 55%),
+    radial-gradient(900px 500px at 100% 0%, rgba(196, 165, 116, 0.16), transparent 50%),
+    linear-gradient(180deg, #e7f0ec 0%, #eef4f1 42%, #e4ebe7 100%);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.35;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.55'/%3E%3C/svg%3E");
+  mix-blend-mode: multiply;
+  z-index: 0;
+}
+
+a {
+  color: inherit;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes drawLine {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes pulseSoft {
+  0%,
+  100% {
+    opacity: 0.45;
+  }
+  50% {
+    opacity: 0.9;
+  }
+}
+
+.animate-rise {
+  animation: rise 0.7s ease-out both;
+}
+
+.animate-rise-delay {
+  animation: rise 0.8s ease-out 0.15s both;
+}
+
+.animate-rise-delay-2 {
+  animation: rise 0.85s ease-out 0.3s both;
+}
+
+.rule-grow {
+  transform-origin: left;
+  animation: drawLine 0.9s ease-out 0.35s both;
+}
+
+.glow-orb {
+  animation: pulseSoft 4.5s ease-in-out infinite;
+}
