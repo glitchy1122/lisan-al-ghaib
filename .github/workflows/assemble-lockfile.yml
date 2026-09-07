@@ -14,11 +14,16 @@ jobs:
       - name: Assemble pnpm-lock.yaml
         run: |
           set -euo pipefail
-          cat $(ls .lock-import/*.txt | sort) > pnpm-lock.yaml
+          # Wait until all expected chunks are present
+          COUNT=$(ls .lock-import/*.b64 2>/dev/null | wc -l)
+          echo "chunk count=$COUNT"
+          test "$COUNT" -ge 74
+          cat $(ls .lock-import/*.b64 | sort) | base64 -d | python3 -c "import sys,zlib; sys.stdout.buffer.write(zlib.decompress(sys.stdin.buffer.read()))" > pnpm-lock.yaml
           python3 - <<'PY'
           from pathlib import Path
           p=Path('pnpm-lock.yaml')
-          assert p.read_text().startswith("lockfileVersion")
+          t=p.read_text()
+          assert t.startswith('lockfileVersion')
           print('assembled', p.stat().st_size)
           PY
           rm -rf .lock-import
