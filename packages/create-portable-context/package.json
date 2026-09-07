@@ -1,7 +1,7 @@
 {
   "name": "create-portable-context",
   "version": "0.2.0",
-  "description": "npx installer for portable AI/IDE project context — detects your repo and adds AGENTS.md, handoff, skills, and bridges without breaking existing files",
+  "description": "npx installer for portable AI/IDE project context \u2014 detects your repo and adds AGENTS.md, handoff, skills, and bridges without breaking existing files",
   "type": "module",
   "bin": {
     "create-portable-context": "./bin/create-portable-context.js",
@@ -30,7 +30,7 @@
     "ai-coding",
     "handoff"
   ],
-  "license": "MIT",
+  "license": "GPL-3.0-or-later",
   "devDependencies": {
     "@types/node": "^20.19.43",
     "typescript": "5.9.3"
