@@ -23,6 +23,7 @@
 - [x] `create-portable-context` npx CLI with detect/add/doctor
 - [x] seed handoff from git/AI prompt + uninstall via manifest
 - [x] Non-destructive install tested on a fake ongoing app
+- [x] Published to GitHub as Lisan al-Ghaib
 
 ## Next
 
@@ -49,5 +50,7 @@ pnpm context:check
 ```
 
 ## Notes for the next agent
+
+Published at https://github.com/glitchy1122/lisan-al-ghaib
 
 Start by skimming this handoff, then open the running app guide at `/`. When changing process, edit AGENTS/CONTEXT — not chat-only memory.
