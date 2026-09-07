@@ -1,0 +1,23 @@
+{
+  "name": "lisan-al-ghaib",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Full-stack monorepo with portable AI/IDE context that travels with the repo",
+  "packageManager": "pnpm@10.33.3",
+  "scripts": {
+    "dev": "pnpm --filter @portable/web dev",
+    "build": "pnpm --filter @portable/web build",
+    "start": "pnpm --filter @portable/web start",
+    "lint": "pnpm --filter @portable/web lint",
+    "typecheck": "pnpm -r --if-present typecheck",
+    "context:check": "node scripts/check-context.mjs",
+    "portable-context": "node packages/create-portable-context/bin/create-portable-context.js",
+    "test:installer": "pnpm --filter create-portable-context test"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "typescript": "5.9.3"
+  }
+}
