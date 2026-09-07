@@ -1,0 +1,11 @@
+---
+description: Always follow portable context discipline in this repo
+alwaysApply: true
+---
+
+# Portable context
+
+- Canonical rules: root `AGENTS.md`
+- Before non-trivial work: read `docs/handoff/CURRENT.md` and `CONTEXT.md`
+- Before ending a session: update the handoff file
+- Do not fork long rules into Cursor-only docs
