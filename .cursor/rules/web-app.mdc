@@ -1,0 +1,12 @@
+---
+description: Next.js app conventions
+globs: apps/web/**/*.{ts,tsx}
+alwaysApply: false
+---
+
+# apps/web
+
+- App Router only; Route Handlers under `src/app/api`.
+- Validate request bodies with Zod schemas from `@portable/shared`.
+- Prefer Server Components; add `"use client"` only for interactivity.
+- Dev server port is 43123.

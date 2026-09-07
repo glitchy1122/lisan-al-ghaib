@@ -1,0 +1,13 @@
+---
+description: Always follow portable context discipline in this repo
+alwaysApply: true
+---
+
+# Portable context
+
+- Canonical rules: root `AGENTS.md` (do not fork into long Cursor-only docs).
+- Before non-trivial work: read `docs/handoff/CURRENT.md` and `CONTEXT.md`.
+- Before ending a coding session: update the handoff file.
+- Shared types/schemas only from `@portable/shared`.
+- Exhaustive switches on unions/enums with a `never` default.
+- Imports stay at the top of the file.
