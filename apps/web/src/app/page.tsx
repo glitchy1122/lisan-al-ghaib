@@ -232,12 +232,12 @@ export default function Home() {
         </p>
         <pre className="mt-8 overflow-x-auto border border-ink/10 bg-ink px-5 py-4 text-sm leading-relaxed text-paper/90">
 {`cd your-ongoing-project
-npx create-portable-context add
-npx create-portable-context seed
-npx create-portable-context seed --prompt
+npx lisan-al-ghaib add
+npx lisan-al-ghaib seed
+npx lisan-al-ghaib seed --prompt
 
-npx create-portable-context uninstall --dry-run
-npx create-portable-context uninstall`}
+npx lisan-al-ghaib uninstall --dry-run
+npx lisan-al-ghaib uninstall`}
         </pre>
         <p className="mt-4 text-sm text-ink-soft/70">
           Seed fills handoff from git; <code className="font-mono text-teal">--prompt</code> captures your current AI chat. Uninstall only removes kit files from the manifest.
