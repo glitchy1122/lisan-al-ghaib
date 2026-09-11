@@ -1,4 +1,4 @@
-# create-portable-context
+# lisan-al-ghaib
 
 **npx installer** for portable AI/IDE project context.
 
@@ -8,8 +8,8 @@ Adds `AGENTS.md`, `CONTEXT.md`, handoff, skills, and tool bridges into **any exi
 
 ```bash
 cd your-ongoing-project
-npx create-portable-context add
-npx create-portable-context seed
+npx lisan-al-ghaib add
+npx lisan-al-ghaib seed
 ```
 
 ### Fill handoff from your current AI chat
@@ -18,23 +18,23 @@ Chat tools don’t expose a shared portable history API. Use this flow instead:
 
 ```bash
 # 1) baseline from git
-npx create-portable-context seed
+npx lisan-al-ghaib seed
 
 # 2) print a prompt → paste into Cursor / Gemini / Grok / Claude
-npx create-portable-context seed --prompt
+npx lisan-al-ghaib seed --prompt
 
 # 3) if the AI prints markdown instead of writing the file:
-npx create-portable-context seed --from-stdin --force < handoff.md
+npx lisan-al-ghaib seed --from-stdin --force < handoff.md
 # or
-npx create-portable-context seed --from-file chat-export.md --force
+npx lisan-al-ghaib seed --from-file chat-export.md --force
 ```
 
 ### Uninstall
 
 ```bash
-npx create-portable-context uninstall --dry-run
-npx create-portable-context uninstall
-npx create-portable-context uninstall --keep-agents   # keep AGENTS/CONTEXT guides
+npx lisan-al-ghaib uninstall --dry-run
+npx lisan-al-ghaib uninstall
+npx lisan-al-ghaib uninstall --keep-agents   # keep AGENTS/CONTEXT guides
 ```
 
 Uninstall only removes files listed in `.portable-context/manifest.json` and strips the README marker section. Application source is never touched.
@@ -51,23 +51,23 @@ Uninstall only removes files listed in `.portable-context/manifest.json` and str
 ## Commands
 
 ```bash
-npx create-portable-context add
-npx create-portable-context seed
-npx create-portable-context seed --prompt
-npx create-portable-context uninstall
-npx create-portable-context detect
-npx create-portable-context doctor
+npx lisan-al-ghaib add
+npx lisan-al-ghaib seed
+npx lisan-al-ghaib seed --prompt
+npx lisan-al-ghaib uninstall
+npx lisan-al-ghaib detect
+npx lisan-al-ghaib doctor
 ```
 
 ## Local development
 
 ```bash
-pnpm --filter create-portable-context test
+pnpm --filter lisan-al-ghaib test
 pnpm portable-context add --dir /path/to/app
 ```
 
 Until published to npm:
 
 ```bash
-node packages/create-portable-context/bin/create-portable-context.js add --dir /path/to/app
+node packages/lisan-al-ghaib/bin/lisan-al-ghaib.js add --dir /path/to/app
 ```

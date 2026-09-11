@@ -8,23 +8,23 @@ Human guide for this repository. Agents should prefer `AGENTS.md`.
 ## One-line install (ongoing projects)
 
 ```bash
-npx create-portable-context add
-npx create-portable-context seed
+npx lisan-al-ghaib add
+npx lisan-al-ghaib seed
 ```
 
 ### Capture current AI chat into handoff
 
 Cursor / Gemini / Grok / etc. do not share a portable chat API. After install:
 
-1. `npx create-portable-context seed` — baseline from git
-2. `npx create-portable-context seed --prompt` — paste into your current AI so it writes `docs/handoff/CURRENT.md` from the live conversation
-3. Or import notes: `npx create-portable-context seed --from-file notes.md --force`
+1. `npx lisan-al-ghaib seed` — baseline from git
+2. `npx lisan-al-ghaib seed --prompt` — paste into your current AI so it writes `docs/handoff/CURRENT.md` from the live conversation
+3. Or import notes: `npx lisan-al-ghaib seed --from-file notes.md --force`
 
 ### Uninstall
 
 ```bash
-npx create-portable-context uninstall --dry-run
-npx create-portable-context uninstall
+npx lisan-al-ghaib uninstall --dry-run
+npx lisan-al-ghaib uninstall
 ```
 
 From this monorepo before npm publish:

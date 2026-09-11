@@ -1,1 +1,51 @@
-PLACEHOLDER
+{
+  "name": "lisan-al-ghaib",
+  "version": "0.2.0",
+  "description": "Lisan al-Ghaib (لسان الغيب) — npx installer for portable AI/IDE project context. Detects your repo and adds AGENTS.md, handoff, skills, and bridges without breaking existing files.",
+  "type": "module",
+  "bin": {
+    "lisan-al-ghaib": "./bin/create-portable-context.js",
+    "create-portable-context": "./bin/create-portable-context.js",
+    "portable-context": "./bin/create-portable-context.js"
+  },
+  "files": [
+    "bin",
+    "src",
+    "templates",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "start": "node ./bin/create-portable-context.js",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test src/**/*.test.js",
+    "prepublishOnly": "node --test src/**/*.test.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "lisan-al-ghaib",
+    "agents.md",
+    "cursor",
+    "claude",
+    "copilot",
+    "portable-context",
+    "ai-coding",
+    "handoff"
+  ],
+  "license": "GPL-3.0-or-later",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/glitchy1122/lisan-al-ghaib.git"
+  },
+  "bugs": {
+    "url": "https://github.com/glitchy1122/lisan-al-ghaib/issues"
+  },
+  "homepage": "https://github.com/glitchy1122/lisan-al-ghaib#readme",
+  "author": "glitchy1122",
+  "devDependencies": {
+    "@types/node": "^20.19.43",
+    "typescript": "5.9.3"
+  }
+}

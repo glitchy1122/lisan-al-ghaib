@@ -9,9 +9,9 @@ Portable AI/IDE project context (Lisan al-Ghaib) — install into **any ongoing 
 
 ```bash
 cd your-ongoing-project
-npx create-portable-context add
-npx create-portable-context seed                 # fill handoff from git
-npx create-portable-context seed --prompt        # paste into Cursor/Gemini/Grok
+npx lisan-al-ghaib add
+npx lisan-al-ghaib seed                 # fill handoff from git
+npx lisan-al-ghaib seed --prompt        # paste into Cursor/Gemini/Grok
 ```
 
 That detects your stack, adds portable context files, and can seed handoff from git or your current AI chat.
@@ -19,10 +19,10 @@ That detects your stack, adds portable context files, and can seed handoff from 
 **Safety:** never deletes app source, skips existing files, only **appends** a marked README section.
 
 ```bash
-npx create-portable-context detect
-npx create-portable-context doctor
-npx create-portable-context uninstall --dry-run
-npx create-portable-context uninstall
+npx lisan-al-ghaib detect
+npx lisan-al-ghaib doctor
+npx lisan-al-ghaib uninstall --dry-run
+npx lisan-al-ghaib uninstall
 ```
 
 Until the package is published to npm, run from this repo:
